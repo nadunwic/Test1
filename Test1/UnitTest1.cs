@@ -28,7 +28,6 @@ namespace Test1
             Thread.Sleep(waitingTime);
 
             webdriver.FindElement(googleSearchBar).SendKeys("stack overflow");
-            Thread.Sleep(waitingTime);
 
             webdriver.FindElement(googleSearchButton).Click();
             Thread.Sleep(waitingTime);
