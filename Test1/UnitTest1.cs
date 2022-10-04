@@ -15,7 +15,7 @@ namespace Test1
         {
             int waitingTime = 1000;
 
-            By googleSearchButton = By.XPath("//a[text()='Log in']");
+            By logInButton = By.XPath("//a[text()='Log in']");
 
 
             IWebDriver webdriver = new ChromeDriver();
@@ -25,7 +25,7 @@ namespace Test1
             webdriver.Navigate().GoToUrl("https://stackoverflow.com/");
             Thread.Sleep(waitingTime);
 
-            webdriver.FindElement(googleSearchButton).Click();
+            webdriver.FindElement(logInButton).Click();
             Thread.Sleep(waitingTime);
 
             webdriver.Quit();
