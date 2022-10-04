@@ -15,26 +15,18 @@ namespace Test1
         {
             int waitingTime = 1000;
 
-            By googleSearchBar = By.Name("q");
-            By googleSearchButton = By.XPath("//div[@class='FPdoLc lJ9FBc']//center//input[@name='btnK']");
-            By googleResult = By.XPath("//h3[text()='Stack Overflow - Where Developers Learn, Share, & Build ...']");
+            By googleSearchButton = By.XPath("//a[text()='Log in']");
 
 
             IWebDriver webdriver = new ChromeDriver();
             webdriver.Manage().Window.Maximize();
             Thread.Sleep(waitingTime);
 
-            webdriver.Navigate().GoToUrl("https://www.google.lk/");
+            webdriver.Navigate().GoToUrl("https://stackoverflow.com/");
             Thread.Sleep(waitingTime);
-
-            webdriver.FindElement(googleSearchBar).SendKeys("stack overflow");
 
             webdriver.FindElement(googleSearchButton).Click();
             Thread.Sleep(waitingTime);
-
-            webdriver.FindElement(googleResult).Click();
-            Thread.Sleep(waitingTime);
-
 
             webdriver.Quit();
         }
